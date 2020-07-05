@@ -1,0 +1,4 @@
+R5T.D0028.Standard - Standard aggregation library for the IMachineNameProvider service.
+
+Goals
+
