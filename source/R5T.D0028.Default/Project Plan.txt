@@ -1,0 +1,4 @@
+R5T.D0028.Default - Default implementations library for the IMachineNameProvider service, NOT-async, providing strongly-typed T0007-based MachineName.
+
+Goals
+
