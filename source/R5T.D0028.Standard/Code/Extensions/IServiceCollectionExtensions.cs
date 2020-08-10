@@ -14,7 +14,7 @@ namespace R5T.D0028.Standard
     public static class IServiceCollectionExtensions
     {
         public static (
-            IServiceAction<IMachineNameProvider> MachineNameProviderAction,
+            IServiceAction<IMachineNameProvider> Main,
             IServiceAction<IStringlyTypedMachineNameProvider> StringlyTypedMachineNameProviderAction
             )
             AddMachineNameProviderAction(this IServiceCollection services)
@@ -30,11 +30,9 @@ namespace R5T.D0028.Standard
 
         public static IServiceCollection AddMachineNameProvider(this IServiceCollection services)
         {
-#pragma warning disable IDE0042 // Deconstruct variable declaration
             var machineNameProviderAction = services.AddMachineNameProviderAction();
-#pragma warning restore IDE0042 // Deconstruct variable declaration
 
-            services.Run(machineNameProviderAction.MachineNameProviderAction);
+            services.Run(machineNameProviderAction.Main);
 
             return services;
         }
