@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 
 using R5T.T0007;
 
-using IStringlyTypedMachineNameProvider = R5T.D0027.IMachineNameProvider;
+using IStringlyTypedMachineNameProvider = R5T.D0027.IMachineNameProvider;using R5T.T0064;
 
 
 namespace R5T.D0028.Default
-{
-    public class MachineNameProvider : IMachineNameProvider
+{[ServiceImplementationMarker]
+    public class MachineNameProvider : IMachineNameProvider,IServiceImplementation
     {
         private IStringlyTypedMachineNameProvider StringlyTypedMachineNameProvider { get; }
 
